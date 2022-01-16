@@ -1,0 +1,105 @@
+<view class="page">
+
+	<!-- top部分 -->
+	<view class="top">
+		<view class="nav">
+			<input placeholder="输入城市名进行搜索" bindinput="bindKeyInput" bindconfirm="search" confirm-type="search"></input>
+			<view class="icon">
+				<icon type="search" size="25" bindtap="search" />
+			</view>
+		</view>
+		<view bindtap="getMyLocation">
+			获取当前位置 {{locationCity}}
+		</view>
+	</view>
+
+	<!-- body部分 -->
+	<view class="body">
+
+<!-- 城市名称 -->
+		<view class="city">
+			<text>{{city}}</text>
+		</view>
+
+<!-- 当天时间 -->
+		<view class="today">
+			<text>{{today.date}}</text>
+		</view>
+
+<!-- 当天天气 -->
+		<view>
+			<image src="{{today.dayPictureUrl}}" mode="aspectFit" style="width: 200rpx; height: 200rpx;margin-top:20rpx;" />
+		</view>
+
+		<view class="body-bottom">
+			<view class="weather">
+				<text>{{today.weather}}</text>
+			</view>
+
+			<view class="body-bottom-right">
+				<view class="temp">
+					<text>{{today.temperature}}</text>
+				</view>
+				<view class="wind">
+					<text>{{today.wind}}</text>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+
+	<!--bottom部分-->
+	<view class="bottom">
+		<view>
+			<text>Tip:</text>
+			<view class="tip">
+				{{tip}}
+				<!-- (抱歉，Tip接口数据丢失。接口修复将尽快更新哈) -->
+			</view>
+		</view>
+
+		<view>
+			<text>未来三日天气</text>
+			<view class="future">
+
+        <!-- 明天天气 -->
+				<view class="future-weather-items">
+					<view>{{tomorrow1.date}}</view>
+					<view class="future-pic">
+						<image src="{{tomorrow1.dayPictureUrl}}" mode="aspectFit" />
+						<image src="{{tomorrow1.nightPictureUrl}}" mode="aspectFit" />
+					</view>
+					<view>{{tomorrow1.weather}}</view>
+					<view>{{tomorrow1.temperature}}</view>
+				</view>
+ 
+        <!-- 后天天气 -->
+				<view class="future-weather-items">
+					<view>{{tomorrow2.date}}</view>
+					<view class="future-pic">
+						<image src="{{tomorrow2.dayPictureUrl}}" mode="aspectFit" />
+						<image src="{{tomorrow2.nightPictureUrl}}" mode="aspectFit" />
+					</view>
+					<view>{{tomorrow2.weather}}</view>
+					<view>{{tomorrow2.temperature}}</view>
+				</view>
+
+        <!-- 大后天天气 -->
+				<view class="future-weather-items">
+					<view>{{tomorrow3.date}}</view>
+					<view class="future-pic">
+						<image src="{{tomorrow3.dayPictureUrl}}" mode="aspectFit" />
+						<image src="{{tomorrow3.nightPictureUrl}}" mode="aspectFit" />
+					</view>
+					<view>{{tomorrow3.weather}}</view>
+					<view>{{tomorrow3.temperature}}</view>
+				</view>
+
+			</view>
+		</view>
+		<view class="notes">数据来源：百度地图开放平台</view>
+	</view>
+	<!--页面最底部标示-->
+
+</view>
