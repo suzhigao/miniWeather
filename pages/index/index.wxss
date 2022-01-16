@@ -1,0 +1,134 @@
+page {
+  background: -webkit-linear-gradient(bottom, lightblue, rgb(3, 171, 238), lightblue);
+  color: #fff;
+}
+
+.page {
+  margin: 25rpx 25rpx 0 25rpx;
+}
+
+/*top容器布局*/
+.top {
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  background-color: #efefef;
+  position: relative;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+}
+
+.input {
+  width: 80%;
+  font-size: 32rpx;
+}
+
+.icon {
+  width: 10%;
+  position: absolute;
+  right: 0;
+  bottom: 5rpx;
+}
+
+/*body容器布局*/
+.body {
+  height: 50vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.body-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.body-bottom-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.city {
+  font-size: 80rpx;
+}
+
+.today {
+  margin-top: 25rpx;
+  font-size: 34rpx;
+}
+
+.weather {
+  font-size: 38rpx;
+}
+
+.wind {
+  font-size: 40rpx;
+  margin-top: 10rpx;
+}
+
+.temp {
+  font-size: 40rpx;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  color: #333;
+}
+
+/*bottom容器布局*/
+.bottom {
+  margin-top:25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 35vh;
+}
+
+.tip {
+  font-size: 28rpx;
+  text-indent: 50rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.future {
+  display: flex;
+  flex-direction: row;
+}
+
+.future-weather-items {
+  width: 30%;
+  background-color: rgba(129, 129, 129, 0.103);
+  margin: 15rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.future-pic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.future-pic image {
+  width: 65rpx;
+  height: 65rpx;
+  border-radius: 5%;
+}
+
+.notes {
+  text-align: right;
+  font-size: 18rpx;
+  font-style: italic;
+}
+
